@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Product List</h1>
+
+<h3>Recommended Products for You</h3>
+<ul>
+  {% for product in recommended_products %}
+    <li>{{ product.name }} - ₹{{ product.price }} (Category: {{ product.category }})</li>
+  {% empty %}
+    <li>No recommendations available at this time.</li>
+  {% endfor %}
+</ul>
+  <h3>Product List</h3>
   <ul>
     {% for product in products %}
       <li>{{ product.name }} - ₹{{ product.price }} (Category: {{ product.category }})</li>
