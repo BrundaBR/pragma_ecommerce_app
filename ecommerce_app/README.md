@@ -29,12 +29,12 @@ Credential- username: admin and password:test@1234
 
 ## Recommendation
 `
-    Improved Recommendation System:
-    1. If the user has past orders, count frequency of category.
-    2. Identify the most frequently purchased category.
-    3. Exclude products the user already purchased in that category.
-    4. Recommend the top 5 products (sorted by descending price) from that category.
-    5. If no new products are available or if the user has no orders,
+- Improved Recommendation System:
+- 1. If the user has past orders, count frequency of category.
+- 2. Identify the most frequently purchased category.
+- 3. Exclude products the user already purchased in that category.
+- 4. Recommend the top 5 products (sorted by descending price) from that category.
+- 5. If no new products are available or if the user has no orders,
        fallback to recommending the top 5 less-expensive products overall.
 `
 
