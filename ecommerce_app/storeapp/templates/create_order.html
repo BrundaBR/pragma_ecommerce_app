@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Create Order</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ order_form.as_p }}
+    {{ formset.management_form }}
+    {% for form in formset %}
+      <div class="order-item">
+        {{ form.as_p }}
+      </div>
+    {% endfor %}
+    <button type="submit">Place Order</button>
+  </form>
+{% endblock %}

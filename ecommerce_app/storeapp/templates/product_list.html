@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Product List</h1>
+  <ul>
+    {% for product in products %}
+      <li>{{ product.name }} - ₹{{ product.price }} (Category: {{ product.category }})</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'create_order' %}">Place an Order</a>
+{% endblock %}

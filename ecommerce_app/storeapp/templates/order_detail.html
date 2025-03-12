@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Order Detail</h1>
+  <p><strong>Order ID:</strong> {{ order.id }}</p>
+  <p><strong>Total Amount:</strong> ₹{{ order.total_amount }}</p>
+  <p><strong>Discount Total:</strong> ₹{{ order.discount_total }}</p>
+  <p><strong>Final Amount:</strong> ₹{{ order.final_amount }}</p>
+  <p><strong>Discount Breakdown:</strong> {{ order.discount_breakdown }}</p>
+  <h2>Items:</h2>
+  <ul>
+    {% for item in order.order_items.all %}
+      <li>{{ item.product.name }} x {{ item.quantity }} - ₹{{ item.product.price }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
